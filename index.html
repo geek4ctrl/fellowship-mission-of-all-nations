@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fellowship Mission of All Nations</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Style the navigation menu */
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        /* Style the main content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0; /* Background color for the banner section */
+        }
+
+        .banner img {
+            max-width: 100%; /* Make sure banner images don't exceed the container width */
+            height: auto; /* Maintain the aspect ratio of the images */
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f00;
+        }
+
+        /* .banner-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+        }
+
+        .banner-slides {
+            display: flex;
+            width: 300%;
+            animation: slide 10s linear infinite;
+        }
+
+        .banner-slides img {
+            width: 100%;
+            height: 100%;
+        } */
+
+/* Keyframes for sliding animation */
+        /* @keyframes slide {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+        } */
+
+        * {box-sizing:border-box}
+
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+        display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Church</h1>
+        <p>A Place of Worship, Fellowship, and Service</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- Add a banner section -->
+        <!-- <section class="banner">
+            <div class="banner-container">
+
+                <div class="banner-slide">
+                    <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80" alt="Image 1">
+                </div>
+                <div class="banner-slide">
+                    <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80" alt="Image 2">
+                </div>
+                <div class="banner-slide">
+                    <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80" alt="Image 3">
+                </div>
+            </div>
+        </section> -->
+
+        <section>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <h1>About Our Church</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac tortor odio. In hac habitasse platea dictumst.</p>
+        <p>Our church offers a welcoming and loving community where you can grow in your faith and connect with others.</p>
+
+        <section id="home">
+        <h2>Home</h2>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum luctus justo, nec bibendum lorem fringilla eget. Aliquam nec posuere neque. Praesent tincidunt, libero eget bibendum egestas, metus erat tristique nulla, a posuere quam est ac orci. Nullam dignissim tortor sit amet bibendum. Sed eget tortor a purus lobortis feugiat. Sed et ultricies neque. Suspendisse at vestibulum neque. Fusce sit amet neque id felis scelerisque sodales. Etiam bibendum ex eu justo tincidunt, id placerat turpis varius. Vivamus nec ex non velit bibendum scelerisque.
+
+        Donec ac odio sit amet elit hendrerit bibendum. Nullam dapibus augue in quam tincidunt, vel varius arcu varius. In at venenatis elit, eu vulputate erat. Fusce bibendum, quam sit amet lacinia sollicitudin, lorem ex fringilla justo, ac vestibulum metus tortor sit amet justo. Curabitur ut lacinia arcu, eu varius velit. Etiam gravida mi vitae nisi bibendum vehicula. Ut ac euismod odio. Cras semper, eros eget fringilla malesuada, nisl risus blandit risus, eu cursus ex ipsum a arcu. Nam eget bibendum odio. Sed suscipit, libero eget tempus auctor, tortor arcu elementum ex, sit amet malesuada purus turpis non libero. Vivamus tempus feugiat tellus, in sollicitudin lorem elementum id. Aliquam erat volutpat.
+
+        Suspendisse non ex sed lectus feugiat blandit. Duis pellentesque tincidunt odio, eget euismod turpis viverra in. Nulla facilisi. Fusce id justo justo. Fusce eget magna non odio fermentum eleifend a id turpis. In in dignissim urna, nec fringilla purus. Vivamus dictum aliquet vestibulum. Sed eleifend laoreet malesuada. Etiam commodo, justo eu vulputate dictum, elit ante commodo nunc, non mattis elit neque nec ante. Vivamus eget condimentum libero. Sed nec fringilla mi.
+
+        Nunc ut hendrerit ante. Etiam id vehicula ex, nec hendrerit libero. Nam vel arcu quis libero euismod varius. Fusce et blandit odio. Vivamus quis mi in justo congue hendrerit. Praesent dictum tincidunt venenatis. Nulla pharetra purus nec ipsum vehicula tincidunt. Proin a nunc venenatis, tempus felis at, rhoncus orci. Donec auctor ex id neque condimentum, vel iaculis urna tristique.
+
+        Vestibulum eu ipsum urna. Etiam nec est in massa volutpat placerat. Vivamus eget turpis dui. Nulla facilisi. Nam ac eleifend arcu. Curabitur non tortor sit amet tellus interdum volutpat sed vel sapien. Nullam vehicula fringilla enim, ac fringilla urna scelerisque nec. Nulla facilisi. Nulla facilisi. Nullam bibendum elit justo, nec congue dolor volutpat non. Integer ac malesuada augue. Integer lacinia erat a massa volutpat dignissim. Vivamus convallis, metus nec gravida fermentum, purus urna vehicula dui, in dignissim lorem tortor vel enim. Sed elementum sollicitudin arcu, eu pharetra sapien ultrices eget. Sed efficitur urna vel quam fermentum, ac elementum dolor tincidunt.
+
+        Sed nec consectetur mi, et cursus tellus. Sed ac lacinia felis, eget vestibulum libero. Donec vestibulum, mi a sollicitudin fringilla, odio turpis rhoncus ipsum, sit amet gravida libero massa non turpis. Vestibulum eget orci at libero luctus ultricies. Integer condimentum, arcu nec rhoncus vehicula, nulla quam auctor dui, sed efficitur felis quam eget est. Integer congue vel dolor in bibendum. Vestibulum sollicitudin velit at nunc auctor, vel gravida enim eleifend. Sed nec justo nec augue luctus fringilla.
+
+        In eu magna tortor. Morbi finibus luctus mi, id vehicula erat ultricies et. Nulla facilisi. Aenean venenatis, nunc vel finibus ullamcorper, augue massa iaculis metus, nec bibendum mi orci sit amet urna. Fusce quis odio ut sapien efficitur congue. Curabitur bibendum at ex eget luctus. Sed volutpat vitae justo ac vehicula. In bibendum luctus augue, ac gravida turpis dapibus non. Sed dignissim mauris eu libero mattis, vel consequat arcu scelerisque. Curabitur viverra quis urna ut condimentum. Aliquam erat volutpat. Curabitur congue erat vitae justo ultrices tristique. Phasellus ullamcorper sollicitudin nunc nec viverra. Etiam efficitur ligula quis tortor malesuada, sed hendrerit tortor aliquet. Sed ac est eu erat hendrerit convallis ac quis elit.
+
+        Sed vel elit vehicula, condimentum enim eget, tristique orci. Vivamus luctus auctor scelerisque. Proin condimentum, nulla vitae pellentesque tristique, tellus nisl dapibus velit, ac bibendum nunc ligula eget turpis. Proin consectetur metus in vehicula cursus. Pellentesque et lectus eu tortor ultrices volutpat eu vel quam. Vivamus vel justo massa. Nullam euismod ultricies nunc, sit amet ullamcorper arcu mattis in. Nulla facilisi. Vivamus eget lectus eget felis interdum bibendum. Etiam quis ultricies urna. Sed eget risus id nulla volutpat ultrices. Nulla facilisi. Curabitur venenatis turpis id efficitur rhoncus. Nullam auctor euismod ex, eget laoreet metus congue ac. Vivamus bibendum, quam eu vestibulum tincidunt, libero justo laoreet orci, in varius erat justo sit amet ante.
+
+        In vestibulum massa id cursus tincidunt. Fusce nec nunc vitae sapien tincidunt malesuada. Vestibulum sit amet diam vitae libero gravida egestas ut id velit. Etiam suscipit neque et justo tristique suscipit. Praesent vel metus nec elit posuere ultricies eu ut lectus. Etiam vehic
+                    
+        </section>
+
+        <section id="about">
+        <h2>About</h2>
+  
+        Welcome to Fellowship Mission of All Nations, a place of faith, hope, and community. Our church has been a cornerstone of love and spirituality for [number of years] years.
+
+        Our mission is to spread the teachings of love, kindness, and compassion as shared by our Savior, Jesus Christ. We believe in creating a welcoming and inclusive environment for all, where every soul can find solace and strength.
+
+        At Fellowship Mission of All Nations, we come together as a family to worship, learn, and serve. Our dedicated clergy and congregation work tirelessly to support one another and our local community. We host various events, including worship services, Bible studies, youth programs, and community outreach initiatives.
+
+        No matter where you are on your spiritual journey, we invite you to join us. Together, we strive to grow in faith, deepen our relationships with God, and make a positive impact on the world around us.
+
+        We look forward to meeting you and sharing the blessings of faith and fellowship. Please feel free to reach out to us if you have any questions or if you'd like to get involved in our church family.
+
+        Come as you are, and let's walk this faith journey together. 
+        </section>
+
+        <section id="services">
+
+        <h2>Services</h2>
+
+        <ul>
+        <li>Worship Services: Provide information about your regular worship services, including schedules, locations, and any special themes or events.</li>
+        <li>Online Sermons: Offer a library of recorded sermons that visitors can access online, allowing them to listen to messages of faith at their convenience.</li>
+        <li>Bible Studies: Share details about Bible study groups, including meeting times, locations, and study materials. You can also offer online study resources.</li>
+        <li>Prayer Requests: Provide a platform for visitors to submit prayer requests. You can either have a form for this or an email address where people can send their requests.</li>
+        <li>Events and Calendar: Display an event calendar that showcases upcoming church events, such as fundraisers, community outreach programs, or special services.</li>
+        <li>Youth and Children's Ministries: Highlight any programs or events specifically designed for youth and children, including Sunday school, youth groups, and vacation Bible school.</li>
+        <li>Online Donations: Make it easy for members and visitors to make online donations or tithes to support the church's mission and ministry.</li>
+        <li>Wedding and Baptism Services: Provide information on how individuals can arrange for weddings or baptisms at the church, including contact details for inquiries.</li>
+        <li>Missions and Outreach: Share stories and information about your church's involvement in community outreach and mission work. Include opportunities for volunteers to get involved.</li>
+        <li>Church History: Offer a brief history of the church, including its founding, growth, and milestones. Highlight any historical significance or architectural features.</li>
+        <li>Contact Information: Provide clear contact information, including the church's physical address, phone number, email address, and a contact form for inquiries.</li>
+        <li>Newsletter or Blog: Publish regular newsletters or blog posts with inspirational messages, updates, and news from the church community.</li>
+        <li>Online Chat or Support: Consider adding a live chat feature or a support page where visitors can get quick answers to their questions.</li>
+        <li>Membership Information: Explain the process of becoming a member of the church, including any required classes or meetings.</li>
+        <li>Accessibility Information: Ensure your website is accessible to all by providing information on physical accessibility, hearing assistance, and other accommodations for those with special needs.</li>
+        </ul>
+
+        Remember to keep your services section organized and user-friendly, making it easy for visitors to find the information they need to engage with your church community.    
+        </section>
+
+        <section id="events">
+        <h2>Events</h2>
+
+        <ul>
+        <li>Sunday Worship Services: Include details about regular Sunday worship services, such as service times, locations, and any special themes or guest speakers.</li>
+        <li>Special Services: Highlight special services or events, such as holiday services, baptisms, confirmations, or communion ceremonies.</li>
+        <li>Community Outreach Programs: Promote community outreach initiatives, such as food drives, clothing donations, or volunteer opportunities.</li>
+        <li>Bible Study Groups: Provide information about ongoing Bible study groups, including meeting schedules and locations.</li>
+        <li>Youth and Children's Events: Showcase events tailored to youth and children, such as youth group meetings, Sunday school classes, and fun activities.</li>
+        <li>Church Social Gatherings: Share details about social events within the church community, like potluck dinners, picnics, or movie nights.</li>
+        <li>Fundraising Events: Promote fundraising events to support church projects or charitable causes.</li>
+        <li>Concerts and Music Performances: Feature musical events, choir performances, or concerts held at the church.</li>
+        <li>Guest Speakers: Announce guest speakers or preachers who will be delivering sermons or lectures at the church.</li>
+        <li>Workshops and Seminars: Offer workshops and seminars on various topics, including faith, personal growth, and family life.</li>
+        <li>Camps and Retreats: Provide information about camps, retreats, or spiritual getaways organized by the church.</li>
+        <li>Holiday Celebrations: Highlight special holiday celebrations and services, such as Christmas Eve, Easter Sunday, or Thanksgiving gatherings.</li>
+        <li>Community Service Projects: Showcase projects that involve the church community in volunteering or helping those in need.</li>
+        <li>Mission Trips: Inform visitors about upcoming mission trips and opportunities to participate in global outreach efforts.</li>
+        <li>Lectures and Educational Series: Feature educational series, lectures, or speaker events related to faith and spirituality.</li>
+        <li>Art and Craft Exhibitions: Display artwork and crafts created by church members or local artists during exhibitions.</li>
+        <li>Sports and Recreation Activities: Share information about sports leagues, fitness classes, or recreational activities hosted by the church.</li>
+        <li>Book Clubs: Invite members to join book clubs or reading groups focused on spiritual or inspirational literature.</li>
+        <li>Prayer Meetings: Announce regular prayer meetings or gatherings for spiritual reflection and intercession.</li>
+        <li>Online Events: Consider hosting virtual events, webinars, or online discussions to engage with a broader audience.</li>
+        </ul>    
+
+</section>
+
+        <section id="contact">
+        <h2>Contact</h2>
+
+        <h1>Contact Us</h1>
+
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>    
+
+        </section>
+        </div>
+
+    <footer>
+        &copy; 2023 Our Church
+    </footer>
+
+
+<script>
+    // Select all anchor links in the navigation
+    const navLinks = document.querySelectorAll('nav a');
+
+    // Add a click event listener to each link
+    navLinks.forEach((link) => {
+        link.addEventListener('click', smoothScroll);
+    });
+
+    // Smooth scroll function
+    function smoothScroll(e) {
+        e.preventDefault(); // Prevent default link behavior
+        const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
+        const targetSection = document.getElementById(targetId); // Find the target section
+        const offset = 60; // Adjust this value as needed
+
+        // Scroll to the target section with smooth behavior
+        window.scrollTo({
+            top: targetSection.offsetTop - offset,
+            behavior: 'smooth',
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const bannerContainer = document.querySelector('.banner-container');
+    const slides = document.querySelectorAll('.banner-slide');
+    let currentSlide = 0;
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateBanner();
+    }
+
+    function updateBanner() {
+        const offset = -currentSlide * 100;
+        bannerContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+    });
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+</script>
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
