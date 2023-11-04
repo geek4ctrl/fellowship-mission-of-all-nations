@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { useState } from "react"
 
@@ -45,7 +45,7 @@ export default function TeamClientComponent() {
                         Our team
                     </h3>
                     <p className="text-gray-600 mt-3">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown.
                     </p>
                 </div>
                 <div className="mt-12">
