@@ -89,9 +89,8 @@ export default function HeroClientComponent() {
                         <img
                             src="https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg"
                             width={400}
-                            className=" md:rounded-tl-[108px] sm:text-center"
+                            className=" md:rounded-tl-[108px] sm:text-center alignContent"
                             alt=""
-                            style={{ textAlign: "-webkit-center" }}
                         />
                     </div>
                 </div>
