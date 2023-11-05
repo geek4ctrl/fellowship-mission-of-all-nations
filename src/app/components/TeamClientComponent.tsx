@@ -6,34 +6,38 @@ export default function TeamClientComponent() {
 
     const team = [
         {
-            avatar: "https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
-            name: "Martiana dialan",
-            title: "Product designer"
+            avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
+            name: "Pastor Ezekiel",
+            title: "Main Pastor"
         },
         {
-            avatar: "https://images.unsplash.com/photo-1623605931891-d5b95ee98459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80",
-            name: "Micheal colorand",
-            title: "Software engineer"
+            avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
+            name: "Pastor Ezekiel",
+            title: "Main Pastor"
         },
         {
-            avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            name: "Brown Luis",
-            title: "Full stack engineer"
+            avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
+            name: "Pastor Ezekiel",
+            title: "Main Pastor"
+        }, {
+            avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
+            name: "Pastor Ezekiel",
+            title: "Main Pastor"
         },
         {
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            name: "Lysa sandiago",
-            title: "Head of designers"
+            avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
+            name: "Pastor Ezekiel",
+            title: "Main Pastor"
         },
         {
-            avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            name: "Daniel martin",
-            title: "Product designer"
+            avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
+            name: "Pastor Ezekiel",
+            title: "Main Pastor"
         },
         {
-            avatar: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-            name: "Vicky tanson",
-            title: "Product manager"
+            avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
+            name: "Pastor Ezekiel",
+            title: "Main Pastor"
         },
     ]
 
@@ -44,9 +48,9 @@ export default function TeamClientComponent() {
                     <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                         Our team
                     </h3>
-                    <p className="text-gray-600 mt-3">
+                    {/* <p className="text-gray-600 mt-3">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown.
-                    </p>
+                    </p> */}
                 </div>
                 <div className="mt-12">
                     <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
