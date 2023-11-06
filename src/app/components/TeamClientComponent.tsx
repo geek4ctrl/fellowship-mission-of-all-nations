@@ -7,37 +7,33 @@ export default function TeamClientComponent() {
     const team = [
         {
             avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
-            name: "Pastor Ezekiel",
-            title: "Main Pastor"
+            name: "Pastor Ezekiel Kiti",
+            title: "Senior Pastor"
         },
         {
             avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
-            name: "Pastor Ezekiel",
-            title: "Main Pastor"
+            name: "Pastor Maghalie Kiti",
+            title: "Secondary Pastor"
         },
         {
             avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
-            name: "Pastor Ezekiel",
-            title: "Main Pastor"
-        }, {
-            avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
-            name: "Pastor Ezekiel",
-            title: "Main Pastor"
+            name: "Pastor Pepe",
+            title: "Junior Pastor"
         },
         {
             avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
-            name: "Pastor Ezekiel",
-            title: "Main Pastor"
+            name: "Pastor Ezekiel Kiti",
+            title: "Senior Pastor"
         },
         {
             avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
-            name: "Pastor Ezekiel",
-            title: "Main Pastor"
+            name: "Pastor Maghalie Kiti",
+            title: "Secondary Pastor"
         },
         {
             avatar: "https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg",
-            name: "Pastor Ezekiel",
-            title: "Main Pastor"
+            name: "Pastor Pepe",
+            title: "Junior Pastor"
         },
     ]
 
@@ -48,9 +44,9 @@ export default function TeamClientComponent() {
                     <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                         Our team
                     </h3>
-                    {/* <p className="text-gray-600 mt-3">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown.
-                    </p> */}
+                    <p className="text-gray-600 mt-3">
+                        Our church team is a dedicated group of individuals, united by faith and love. Committed to serving our congregation and community, we strive to make a positive impact through worship, outreach, and support. Together, we embody the spirit of togetherness, compassion, and shared purpose.
+                    </p>
                 </div>
                 <div className="mt-12">
                     <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
