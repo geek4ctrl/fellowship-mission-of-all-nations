@@ -70,10 +70,10 @@ export default function HeroClientComponent() {
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                             A Place of Worship, Fellowship, and Service
                         </h2>
-                        {/* <p>
-                            Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                        <p>
+                            Welcome to our church's online home! We are delighted to have you here. At Fellowship Mission of All Nations, we are a warm and inclusive community, dedicated to worship, fellowship, and spreading God's love. Explore our site to discover our services, events, and resources. Join us on this faith-filled journey together.
                         </p>
-                        <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+                        {/* <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <a href="javascript:void(0)" className="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
                                 Let"s get started
                             </a>
