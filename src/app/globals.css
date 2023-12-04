@@ -35,3 +35,7 @@ body {
 alignContent {
   text-align: -webkit-center;
 }
+
+* {
+  scroll-behavior: smooth;
+}
