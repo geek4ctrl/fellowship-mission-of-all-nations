@@ -38,7 +38,7 @@ export default function ContactClientComponent() {
     ]
 
     return (
-        <main className="py-14">
+        <main className="py-14" id="contact">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className="max-w-lg mx-auto space-y-3 sm:text-center">
                     <h3 className="text-indigo-600 font-semibold">

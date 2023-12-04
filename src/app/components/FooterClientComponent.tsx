@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "../../../node_modules/next/link";
 
 export default function FooterClientComponent() {
 
@@ -25,10 +26,17 @@ export default function FooterClientComponent() {
             href: "javascript:void()",
             name: "Contact"
         },
+    ];
+
+    const navigation = [
+        { title: "Hero", reference: "#hero", path: "javascript:void(0)" },
+        { title: "Services", reference: "#services", path: "javascript:void(0)" },
+        { title: "Team", reference: "#team", path: "javascript:void(0)" },
+        { title: "Contact", reference: "#contact", path: "javascript:void(0)" },
     ]
 
     return (
-        <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
+        <footer id="footer" className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
             <div className="max-w-lg sm:mx-auto sm:text-center">
                 {/* <img src="https://www.floatui.com/logo.svg" className="w-32 sm:mx-auto" /> */}
                 <h1 className="font-bold">Fellowship Mission of All Nations</h1>
@@ -38,11 +46,12 @@ export default function FooterClientComponent() {
             </div>
             <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
                 {
-                    footerNavs.map((item, idx) => (
+                    navigation.map((item, idx) => (
                         <li key="idx" className=" hover:text-gray-800">
-                            <a key={idx} href={item.href}>
+                            {/* <a key={idx} href={item.href}>
                                 {item.name}
-                            </a>
+                            </a> */}
+                            <Link href={item.reference}>{item.title}</Link>
                         </li>
                     ))
                 }
