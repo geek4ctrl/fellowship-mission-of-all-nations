@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "../../../node_modules/next/link"
 
 export default function HeroClientComponent() {
 
@@ -8,10 +9,10 @@ export default function HeroClientComponent() {
 
     // Replace javascript:void(0) path with your path
     const navigation = [
-        { title: "Hero", path: "javascript:void(0)" },
-        { title: "Services", path: "javascript:void(0)" },
-        { title: "Team", path: "javascript:void(0)" },
-        { title: "Contact", path: "javascript:void(0)" },
+        { title: "Hero", reference: "#hero", path: "javascript:void(0)" },
+        { title: "Services", reference: "#services", path: "javascript:void(0)" },
+        { title: "Team", reference: "#team", path: "javascript:void(0)" },
+        { title: "Contact", reference: "#contact", path: "javascript:void(0)" },
     ]
 
     return (
@@ -49,7 +50,9 @@ export default function HeroClientComponent() {
                         {
                             navigation.map((item, idx) => (
                                 <li className="text-gray-500 hover:text-indigo-600" key={idx}>
-                                    <a href={item.path}>{item.title}</a>
+                                    {/* <a href={item.path}>{item.title}</a> */}
+
+                                    <Link href={item.reference}>{item.title}</Link>
                                 </li>
                             ))
                         }

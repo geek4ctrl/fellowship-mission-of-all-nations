@@ -38,7 +38,7 @@ export default function TeamClientComponent() {
     ]
 
     return (
-        <section className="py-14">
+        <section className="py-14" id="team">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-xl mx-auto sm:text-center">
                     <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
