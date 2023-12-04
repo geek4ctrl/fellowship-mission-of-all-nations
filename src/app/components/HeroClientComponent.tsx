@@ -8,9 +8,9 @@ export default function HeroClientComponent() {
 
     // Replace javascript:void(0) path with your path
     const navigation = [
-        { title: "About", path: "javascript:void(0)" },
+        { title: "Hero", path: "javascript:void(0)" },
         { title: "Services", path: "javascript:void(0)" },
-        { title: "Event", path: "javascript:void(0)" },
+        { title: "Team", path: "javascript:void(0)" },
         { title: "Contact", path: "javascript:void(0)" },
     ]
 
@@ -70,9 +70,9 @@ export default function HeroClientComponent() {
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                             A Place of Worship, Fellowship, and Service
                         </h2>
-                        <p>
-                            Welcome to our church's online home! We are delighted to have you here. At Fellowship Mission of All Nations, we are a warm and inclusive community, dedicated to worship, fellowship, and spreading God's love. Explore our site to discover our services, events, and resources. Join us on this faith-filled journey together.
-                        </p>
+                        <h3>
+                            Greetings and welcome to the virtual space of our church! We're thrilled to have you join us. Embracing a spirit of warmth and inclusivity, Fellowship Mission of All Nations is a community devoted to worship, fellowship, and the embodiment of God's boundless love. Navigate through our online abode to unveil a plethora of services, upcoming events, and invaluable resources. Together, let's embark on this journey of faith, supporting and uplifting one another. Your presence enriches our digital congregation, and we invite you to explore the profound connections and shared devotion that define our collective spiritual voyage.
+                        </h3>
                         {/* <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <a href="javascript:void(0)" className="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
                                 Let"s get started
