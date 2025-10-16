@@ -49,13 +49,13 @@ export default function ServiceClientComponent() {
                 </p>
             </div>
             <div className="mt-16">
-                <ul className="flex flex-col items-center justify-center w-full gap-12 sm:grid sm:grid-cols-2 md:grid-cols-3">
+                <ul className="flex flex-col items-center justify-center w-full gap-12 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:items-start sm:justify-items-center">
                     {team.map((item, index) => (
-                        <li key={item.topic} className="animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+                        <li key={item.topic} className="animate-fade-in w-full flex flex-col" style={{animationDelay: `${index * 0.1}s`}}>
                             <div className="group transform hover:scale-105 transition-all duration-300">
                                 <PersonCard avatar={item.avatar} name={item.name} title={item.title} />
                             </div>
-                            <div className="mt-6 p-6 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl rounded-2xl shadow-xl border border-indigo-200 dark:border-indigo-800 hover:border-indigo-400 dark:hover:border-indigo-500 transition-all duration-300">
+                            <div className="mt-6 p-6 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl rounded-2xl shadow-xl border border-indigo-200 dark:border-indigo-800 hover:border-indigo-400 dark:hover:border-indigo-500 transition-all duration-300 flex-1 min-h-[200px] flex flex-col justify-between">
                                 <div className="text-gray-900 dark:text-white text-base sm:text-lg font-bold mb-3 text-center">{item.topic}</div>
                                 <div className="flex items-center justify-center gap-2 text-indigo-600 dark:text-indigo-400 text-sm font-semibold mb-3">
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -53,13 +53,11 @@ export default function TeamClientComponent() {
                     Within our church team, a close-knit assembly of passionate individuals stands united by a profound connection of faith and love. Our shared commitment extends beyond the confines of our congregation, reaching into the heart of the community we serve. Fueled by a collective desire to create positive change, we engage in worship, outreach, and unwavering support. In this harmonious collaboration, we cultivate an environment that reflects the essence of togetherness, compassion, and a common purpose. Together, as a dedicated force, we strive to make a lasting impact, guided by the principles of faith that bind us and the love that propels us forward.
                 </p>
             </div>
-            <div className="mt-16">
-                <ul className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+            <div className="mt-20">
+                <ul className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 items-start justify-items-center">
                     {team.map((item, index) => (
-                        <li key={item.name} className="animate-fade-in" style={{animationDelay: `${index * 0.15}s`}}>
-                            <div className="transform hover:scale-105 transition-all duration-300">
-                                <PersonCard avatar={item.avatar} name={item.name} title={item.title} />
-                            </div>
+                        <li key={item.name} className="animate-fade-in w-full flex justify-center" style={{animationDelay: `${index * 0.15}s`}}>
+                            <PersonCard avatar={item.avatar} name={item.name} title={item.title} />
                         </li>
                     ))}
                 </ul>
