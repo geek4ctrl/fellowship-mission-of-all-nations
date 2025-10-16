@@ -17,28 +17,47 @@ export default function RootLayout({
   // Theme toggle logic
   // This is a simple implementation using localStorage and a button
   // For a more robust solution, consider using context or a library
-  return (
-    <html lang="en" className="scroll-smooth">
-      <body className="bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
-  {/* ThemeToggle removed from layout. Now only in navigation. */}
-        {children}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('theme');
-                  if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch(e) {}
-              })();
-            `,
-          }}
-        />
-      </body>
-    </html>
-  )
+        return (
+          <html lang="en" className="scroll-smooth">
+            <head>
+              <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+              <title>Fellowship Mission of All Nations</title>
+              <meta name="description" content="A welcoming church community devoted to worship, fellowship, and service. Join us for events, resources, and spiritual growth." />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="theme-color" content="#312e81" />
+              {/* Open Graph / Facebook */}
+              <meta property="og:type" content="website" />
+              <meta property="og:url" content="https://fellowship-mission.org/" />
+              <meta property="og:title" content="Fellowship Mission of All Nations" />
+              <meta property="og:description" content="A welcoming church community devoted to worship, fellowship, and service. Join us for events, resources, and spiritual growth." />
+              <meta property="og:image" content="https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg" />
+              {/* Twitter */}
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:url" content="https://fellowship-mission.org/" />
+              <meta name="twitter:title" content="Fellowship Mission of All Nations" />
+              <meta name="twitter:description" content="A welcoming church community devoted to worship, fellowship, and service. Join us for events, resources, and spiritual growth." />
+              <meta name="twitter:image" content="https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg" />
+            </head>
+            <body className="bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
+              {/* ThemeToggle removed from layout. Now only in navigation. */}
+              {children}
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    (function() {
+                      try {
+                        var theme = localStorage.getItem('theme');
+                        if (theme === 'dark') {
+                          document.documentElement.classList.add('dark');
+                        } else {
+                          document.documentElement.classList.remove('dark');
+                        }
+                      } catch(e) {}
+                    })();
+                  `,
+                }}
+              />
+            </body>
+          </html>
+        )
 }

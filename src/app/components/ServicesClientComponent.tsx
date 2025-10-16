@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image";
+import PersonCard from "./PersonCard";
 
 export default function ServiceClientComponent() {
 
@@ -45,23 +45,8 @@ export default function ServiceClientComponent() {
             <div className="mt-16">
                 <ul className="flex flex-col items-center justify-center w-full gap-10 sm:grid sm:grid-cols-2 md:grid-cols-3">
                     {team.map((item) => (
-                        <li key={item.topic} className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 p-4 sm:p-6 flex flex-col items-center w-full max-w-xs sm:max-w-xs xs:max-w-full mb-6 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:border-indigo-400 dark:hover:border-indigo-600 group">
-                            <div className="absolute inset-0 rounded-3xl border-4 border-transparent group-hover:border-indigo-400 dark:group-hover:border-indigo-600 transition-all duration-300 pointer-events-none"></div>
-                            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden mb-3 sm:mb-4">
-                                <Image
-                                    src={item.avatar}
-                                    width={160}
-                                    height={160}
-                                    className="w-full h-full object-cover rounded-2xl max-w-full max-h-full"
-                                    alt={item.name}
-                                    unoptimized
-                                />
-                            </div>
-                            <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 mb-1">
-                                <span className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{item.name}</span>
-                                <span className="inline-block align-middle"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clipRule="evenodd" /></svg></span>
-                            </div>
-                            <div className="text-gray-500 dark:text-gray-300 text-xs sm:text-sm mb-1 sm:mb-2">{item.title}</div>
+                        <li key={item.topic}>
+                            <PersonCard avatar={item.avatar} name={item.name} title={item.title} />
                             <div className="text-gray-700 dark:text-gray-200 text-sm sm:text-base font-medium mb-1 sm:mb-2 text-center">{item.topic}</div>
                             <div className="text-gray-400 dark:text-gray-400 text-xs mb-1 sm:mb-2">{item.day} &bull; {item.time}</div>
                             <div className="text-gray-500 dark:text-gray-400 text-xs italic mb-2 sm:mb-4 text-center">{item.message}</div>
