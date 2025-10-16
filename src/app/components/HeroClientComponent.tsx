@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "../../../node_modules/next/link"
+import { HomeIcon, Cog6ToothIcon, UsersIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import ThemeToggle from "./ThemeToggle"
 import Image from "next/image"
 
@@ -11,10 +12,10 @@ export default function HeroClientComponent() {
 
     // Replace javascript:void(0) path with your path
     const navigation = [
-        { title: "Hero", reference: "#hero", path: "javascript:void(0)" },
-        { title: "Services", reference: "#services", path: "javascript:void(0)" },
-        { title: "Team", reference: "#team", path: "javascript:void(0)" },
-        { title: "Contact", reference: "#contact", path: "javascript:void(0)" },
+        { title: "Hero", reference: "#hero", path: "javascript:void(0)", icon: HomeIcon },
+        { title: "Services", reference: "#services", path: "javascript:void(0)", icon: Cog6ToothIcon },
+        { title: "Team", reference: "#team", path: "javascript:void(0)", icon: UsersIcon },
+        { title: "Contact", reference: "#contact", path: "javascript:void(0)", icon: EnvelopeIcon },
     ]
 
     return (
@@ -42,7 +43,8 @@ export default function HeroClientComponent() {
                     </div>
                     <div className="hidden sm:flex space-x-6 mt-2 sm:mt-0">
                         {navigation.map((item) => (
-                            <Link key={item.reference} href={item.reference} className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors duration-200">
+                            <Link key={item.reference} href={item.reference} className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors duration-200">
+                                <item.icon className="w-5 h-5" aria-hidden="true" />
                                 <span aria-label={item.title}>{item.title}</span>
                             </Link>
                         ))}
@@ -51,7 +53,8 @@ export default function HeroClientComponent() {
                 {state && (
                     <div className="absolute top-full left-0 w-full bg-white/95 dark:bg-black/95 backdrop-blur-lg shadow-lg border-b border-gray-200 dark:border-gray-800 flex flex-col items-center py-4 sm:hidden animate-fade-in">
                         {navigation.map((item) => (
-                            <Link key={item.reference} href={item.reference} className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-3 w-full text-center transition-colors duration-200">
+                            <Link key={item.reference} href={item.reference} className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-3 w-full justify-center text-center transition-colors duration-200">
+                                <item.icon className="w-5 h-5" aria-hidden="true" />
                                 <span aria-label={item.title}>{item.title}</span>
                             </Link>
                         ))}
