@@ -38,7 +38,7 @@ export default function BackToTop() {
                     <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-full opacity-75 group-hover:opacity-100 blur-lg transition-all duration-300 animate-pulse"></div>
                     
                     {/* Button */}
-                    <div className="relative w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-full shadow-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 border-2 border-white/30">
+                    <div className="relative w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 border-2 border-white/30">
                         {/* Inner shine effect */}
                         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/20 to-transparent"></div>
                         

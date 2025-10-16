@@ -10,7 +10,7 @@ export interface PersonCardProps {
 
 const PersonCard: React.FC<PersonCardProps> = ({ avatar, name, title, className }) => (
   <div
-    className={`relative bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30 dark:from-gray-900 dark:via-indigo-950/50 dark:to-purple-950/50 backdrop-blur-2xl rounded-3xl shadow-2xl border-2 border-indigo-200/60 dark:border-indigo-800/60 px-3 py-8 sm:p-10 flex flex-col items-center w-full max-w-sm mx-auto transition-all duration-700 hover:scale-110 hover:shadow-[0_20px_60px_-15px_rgba(99,102,241,0.5)] hover:border-indigo-400 dark:hover:border-indigo-500 group overflow-hidden min-h-[400px] ${className || ''}`}
+    className={`relative bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30 dark:from-gray-900 dark:via-indigo-950/50 dark:to-purple-950/50 backdrop-blur-2xl rounded-3xl shadow-2xl border-2 border-indigo-200/60 dark:border-indigo-800/60 px-3 py-8 sm:p-10 flex flex-col items-center w-full max-w-sm mx-auto transition-all duration-700 hover:shadow-[0_20px_60px_-15px_rgba(99,102,241,0.5)] hover:border-indigo-400 dark:hover:border-indigo-500 group overflow-hidden min-h-[400px] ${className || ''}`}
     tabIndex={0}
     aria-label={`${name}, ${title}`}
   >
