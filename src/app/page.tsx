@@ -3,6 +3,7 @@ import FooterClientComponent from './components/FooterClientComponent'
 import HeroClientComponent from './components/HeroClientComponent'
 import ServiceClientComponent from './components/ServicesClientComponent'
 import TeamClientComponent from './components/TeamClientComponent'
+import BackToTop from './components/BackToTop'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <div className="animate-fade-in delay-800">
         <FooterClientComponent />
       </div>
+      <BackToTop />
     </>
   )
 }

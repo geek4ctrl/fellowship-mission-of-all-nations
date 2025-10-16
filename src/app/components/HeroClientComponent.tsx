@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "../../../node_modules/next/link"
 import { HomeIcon, Cog6ToothIcon, UsersIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import ThemeToggle from "./ThemeToggle"
@@ -9,6 +9,23 @@ import Image from "next/image"
 export default function HeroClientComponent() {
 
     const [state, setState] = useState(false)
+
+    // Close mobile menu when clicking outside or on a link
+    const closeMobileMenu = () => {
+        setState(false)
+    }
+
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (state) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'unset'
+        }
+        return () => {
+            document.body.style.overflow = 'unset'
+        }
+    }, [state])
 
     // Replace javascript:void(0) path with your path
     const navigation = [
@@ -39,7 +56,7 @@ export default function HeroClientComponent() {
                             <div className="flex items-center">
                                 <ThemeToggle />
                             </div>
-                            <button className="text-gray-600 dark:text-gray-300 outline-none sm:hidden ml-2 h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-gray-800 dark:to-indigo-900 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" onClick={() => setState(!state)}>
+                            <button className="text-gray-600 dark:text-gray-300 outline-none sm:hidden ml-2 h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-gray-800 dark:to-indigo-900 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-95" onClick={() => setState(!state)} aria-expanded={state} aria-label="Toggle navigation menu">
                                 {state ? (
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -62,14 +79,51 @@ export default function HeroClientComponent() {
                     </div>
                 </div>
                 {state && (
-                    <div className="absolute top-full left-0 w-full bg-white/95 dark:bg-black/95 backdrop-blur-2xl shadow-2xl border-b-2 border-indigo-200 dark:border-indigo-900 flex flex-col items-center py-6 sm:hidden animate-fade-in" role="menu" aria-label="Mobile site sections">
-                        {navigation.map((item) => (
-                            <Link key={item.reference} href={item.reference} className="flex items-center gap-3 text-gray-900 dark:text-gray-100 hover:text-white dark:hover:text-white font-semibold py-4 px-8 w-full justify-center text-center transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-purple-600 rounded-xl mx-4" role="menuitem" aria-label={`Go to ${item.title} section`}>
-                                <item.icon className="w-6 h-6" aria-hidden="true" />
-                                <span className="text-lg">{item.title}</span>
-                            </Link>
-                        ))}
-                    </div>
+                    <>
+                        {/* Overlay backdrop */}
+                        <div 
+                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 animate-fade-in" 
+                            onClick={closeMobileMenu}
+                            aria-hidden="true"
+                        ></div>
+                        
+                        {/* Mobile menu */}
+                        <div className="fixed top-[73px] left-0 right-0 bottom-0 z-40 bg-white/98 dark:bg-black/98 backdrop-blur-2xl shadow-2xl border-b-2 border-indigo-200 dark:border-indigo-900 flex flex-col overflow-y-auto" role="menu" aria-label="Mobile site sections">
+                            {/* Menu header */}
+                            <div className="px-6 py-6 border-b border-gray-200 dark:border-gray-800">
+                                <h2 className="text-xl font-bold bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-800 dark:from-indigo-200 dark:via-purple-300 dark:to-pink-300 bg-clip-text text-transparent">Menu</h2>
+                            </div>
+                            
+                            {/* Navigation items */}
+                            <nav className="flex-1 px-4 py-6 space-y-2">
+                                {navigation.map((item, index) => (
+                                    <Link 
+                                        key={item.reference} 
+                                        href={item.reference} 
+                                        onClick={closeMobileMenu}
+                                        className="flex items-center gap-4 text-gray-900 dark:text-gray-100 font-semibold py-4 px-6 rounded-2xl transition-all duration-300 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-purple-600 hover:text-white active:scale-95 animate-fade-in" 
+                                        style={{animationDelay: `${index * 0.1}s`}}
+                                        role="menuitem" 
+                                        aria-label={`Go to ${item.title} section`}
+                                    >
+                                        <div className="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-900/50 dark:to-purple-900/50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <item.icon className="w-6 h-6" aria-hidden="true" />
+                                        </div>
+                                        <span className="text-lg">{item.title}</span>
+                                        <svg className="w-5 h-5 ml-auto opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </Link>
+                                ))}
+                            </nav>
+                            
+                            {/* Footer info */}
+                            <div className="px-6 py-6 border-t border-gray-200 dark:border-gray-800 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/50 dark:to-purple-950/50">
+                                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">Fellowship Mission of All Nations</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-500 text-center mt-1">© {new Date().getFullYear()} All rights reserved</p>
+                            </div>
+                        </div>
+                    </>
                 )}
             </nav>
             <section id="main-content" className="relative py-32 bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 dark:from-gray-900 dark:via-indigo-950 dark:to-purple-950 overflow-hidden" aria-label="Hero section" role="region" tabIndex={-1}>
