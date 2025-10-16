@@ -35,17 +35,17 @@ export default function ServiceClientComponent() {
 
     return (
     <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-indigo-100 dark:from-black dark:via-gray-900 dark:to-gray-800" id="services">
-        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+    <div className="max-w-screen-xl mx-auto px-4 xs:px-6 md:px-8">
             <div className="max-w-xl mx-auto sm:text-center">
                 <h3 className="text-gray-800 dark:text-white text-4xl font-extrabold mb-2 tracking-tight">Service Schedule</h3>
-                <p className="text-gray-600 dark:text-gray-300 mt-3 text-lg">
+                <p className="text-gray-600 dark:text-gray-300 mt-3 text-lg font-normal">
                     Our dynamic service schedule epitomizes a rich tapestry of spiritual engagement and community connection. Every Sunday unfolds with a soul-stirring worship, ushering in a day dedicated to reflection, learning, and communal bonds. Mornings witness age-specific activities, nurturing growth in children, youth, and adults. Midday congregational services foster unity, followed by fellowship lunches that nurture camaraderie. Afternoons are diverse, ranging from choir rehearsals to outreach initiatives. Evenings offer serene contemplation with inspirational messages, while midweek gatherings provide moments of renewal. Special services mark significant occasions, blending tradition and innovation. Our evolving schedule ensures a vibrant and inclusive spiritual journey year-round.
                 </p>
             </div>
             <div className="mt-16">
                 <ul className="flex flex-col items-center justify-center w-full gap-10 sm:grid sm:grid-cols-2 md:grid-cols-3">
                     {team.map((item) => (
-                        <li key={item.topic} className="bg-white dark:bg-gray-900 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-800 p-4 sm:p-6 flex flex-col items-center w-full max-w-xs mb-6 transition-all duration-300 hover:shadow-xl">
+                        <li key={item.topic} className="bg-white dark:bg-gray-900 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-800 p-6 sm:p-8 flex flex-col items-center w-full max-w-xs sm:max-w-xs xs:max-w-full mb-8 transition-all duration-300 hover:shadow-xl text-base xs:text-lg">
                             <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden mb-3 sm:mb-4">
                                 <Image
                                     src={item.avatar}

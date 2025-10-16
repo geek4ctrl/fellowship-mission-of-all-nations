@@ -63,8 +63,8 @@ export default function HeroClientComponent() {
                     {/* Left Side: Headline, Description, Buttons, Stats */}
                     <div className="flex-1 flex flex-col justify-center items-start max-w-lg md:max-w-xl space-y-6">
                         <h1 className="text-4xl md:text-6xl font-extrabold text-indigo-700 dark:text-white leading-tight mb-4">Welcome to Our Church</h1>
-                        <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-2">A Place of Worship, Fellowship, and Service</h2>
-                        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-6">Greetings and welcome to the virtual space of our church! We're thrilled to have you join us. Embracing a spirit of warmth and inclusivity, Fellowship Mission of All Nations is a community devoted to worship, fellowship, and the embodiment of God's boundless love. Navigate through our online abode to unveil a plethora of services, upcoming events, and invaluable resources. Together, let's embark on this journey of faith, supporting and uplifting one another. Your presence enriches our digital congregation, and we invite you to explore the profound connections and shared devotion that define our collective spiritual voyage.</p>
+                        <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-2">A Place of Worship, Fellowship, and Service</h2>
+                        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-6 font-normal">Greetings and welcome to the virtual space of our church! We're thrilled to have you join us. Embracing a spirit of warmth and inclusivity, Fellowship Mission of All Nations is a community devoted to worship, fellowship, and the embodiment of God's boundless love. Navigate through our online abode to unveil a plethora of services, upcoming events, and invaluable resources. Together, let's embark on this journey of faith, supporting and uplifting one another. Your presence enriches our digital congregation, and we invite you to explore the profound connections and shared devotion that define our collective spiritual voyage.</p>
                         <div className="flex gap-4 mb-6">
                             <a href="#contact" className="inline-block px-6 py-3 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold shadow hover:bg-gray-900 dark:hover:bg-gray-200 transition-all">Try for Free</a>
                             <button className="inline-block px-6 py-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition-all">Preview</button>
@@ -74,11 +74,11 @@ export default function HeroClientComponent() {
                     <div className="flex-1 flex justify-center items-center w-full md:w-auto">
                         <div className="relative w-full max-w-md md:max-w-lg h-[340px] md:h-[400px] bg-white dark:bg-gray-900 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 flex items-center justify-center overflow-hidden">
                             <Image
-                                src="/hero-card-mockup.png"
+                                src="https://res.cloudinary.com/dhqvb8wbn/image/upload/v1699170099/z26ls5vhnz8sf0x6d5jp.jpg"
                                 width={500}
                                 height={400}
-                                className="object-contain w-full h-full"
-                                alt="App finance mockup"
+                                className="object-cover w-full h-full"
+                                alt="Church community"
                                 priority
                             />
                         </div>

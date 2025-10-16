@@ -38,12 +38,12 @@ export default function TeamClientComponent() {
 
     return (
     <section className="py-14 bg-white dark:bg-black" id="team">
-            <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+            <div className="max-w-screen-xl mx-auto px-4 xs:px-6 md:px-8">
                 <div className="max-w-xl mx-auto sm:text-center">
                     <h3 className="text-gray-800 dark:text-white text-3xl font-semibold sm:text-4xl">
                         Our team
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mt-3">
+                    <p className="text-gray-600 dark:text-gray-300 mt-3 font-normal">
                         Within our church team, a close-knit assembly of passionate individuals stands united by a profound connection of faith and love. Our shared commitment extends beyond the confines of our congregation, reaching into the heart of the community we serve. Fueled by a collective desire to create positive change, we engage in worship, outreach, and unwavering support. In this harmonious collaboration, we cultivate an environment that reflects the essence of togetherness, compassion, and a common purpose. Together, as a dedicated force, we strive to make a lasting impact, guided by the principles of faith that bind us and the love that propels us forward.
                     </p>
                 </div>
@@ -51,12 +51,12 @@ export default function TeamClientComponent() {
                     <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
                         {
                             team.map((item, idx) => (
-                                <li key={item.name} className="bg-white dark:bg-gray-900 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-800 p-4 sm:p-6 flex flex-col items-center w-full max-w-xs mx-auto transition-all duration-300 hover:shadow-xl">
-                                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden mb-3 sm:mb-4">
+                                <li key={item.name} className="bg-white dark:bg-gray-900 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-800 p-6 sm:p-8 flex flex-col items-center w-full max-w-xs xs:max-w-full mx-auto mb-10 transition-all duration-300 hover:shadow-xl text-base xs:text-lg">
+                                    <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden mb-4 sm:mb-6">
                                         <Image
                                             src={item.avatar}
-                                            width={160}
-                                            height={160}
+                                            width={176}
+                                            height={176}
                                             className="w-full h-full object-cover rounded-2xl"
                                             alt={item.name}
                                         />
