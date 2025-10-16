@@ -38,47 +38,52 @@ export default function ContactClientComponent() {
     ]
 
     return (
-    <main className="py-20 bg-gradient-to-br from-indigo-50 via-white to-indigo-100 dark:from-black dark:via-gray-900 dark:to-gray-800" id="contact">
-    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 text-gray-600 dark:text-gray-300 md:px-8">
-            <div className="max-w-lg mx-auto space-y-3 sm:text-center">
-                <h3 className="text-indigo-600 dark:text-indigo-400 font-bold text-2xl mb-2 tracking-tight">Contact</h3>
-                <p className="text-gray-800 dark:text-white text-4xl font-semibold sm:text-5xl mb-2">Get in touch</p>
-                <p className="dark:text-gray-200 text-lg font-normal">We’d love to hear from you! Please fill out the form below.</p>
+    <main className="relative py-24 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-100 dark:from-gray-950 dark:via-indigo-950 dark:to-purple-950 overflow-hidden" id="contact">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-300 dark:bg-purple-700 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-25 animate-float"></div>
+            <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-300 dark:bg-pink-700 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-25 animate-float" style={{animationDelay: '2.5s'}}></div>
+        </div>
+        <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 text-gray-600 dark:text-gray-300 md:px-8">
+            <div className="max-w-lg mx-auto space-y-4 text-center">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-indigo-500 text-white text-sm font-semibold rounded-full shadow-lg mb-2">✉️ Get In Touch</div>
+                <h3 className="text-5xl font-extrabold bg-gradient-to-r from-pink-900 via-purple-800 to-indigo-800 dark:from-pink-200 dark:via-purple-300 dark:to-indigo-300 bg-clip-text text-transparent mb-3">Contact Us</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-lg font-normal">We'd love to hear from you! Please fill out the form below.</p>
             </div>
-            <div className="mt-16 max-w-lg mx-auto">
-                <form onSubmit={(e) => e.preventDefault()} className="space-y-7 bg-white/80 dark:bg-black/60 backdrop-blur-lg rounded-2xl shadow-xl border border-indigo-100 dark:border-gray-800 p-8">
+            <div className="mt-16 max-w-2xl mx-auto">
+                <form onSubmit={(e) => e.preventDefault()} className="space-y-8 bg-white/90 dark:bg-gray-900/90 backdrop-blur-2xl rounded-3xl shadow-2xl border-2 border-white/50 dark:border-gray-800/50 p-10 hover:shadow-3xl transition-all duration-500">
                     <div className="flex flex-col items-center gap-y-7 gap-x-6 [&>*]:w-full sm:flex-row">
-                        <div className="flex flex-col gap-4 w-full">
+                        <div className="flex flex-col gap-6 w-full">
                             <div className="flex-1">
-                                <label htmlFor="firstName" className="font-semibold text-gray-700 dark:text-gray-200">First name</label>
-                                    <input id="firstName" name="firstName" type="text" required className="w-full mt-2 px-4 py-3 text-gray-700 dark:text-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-400 shadow rounded-xl transition-all duration-300 focus:ring-2 focus:ring-indigo-400" />
+                                <label htmlFor="firstName" className="font-bold text-gray-800 dark:text-gray-200 text-sm mb-2 block">First name</label>
+                                <input id="firstName" name="firstName" type="text" required className="w-full mt-2 px-5 py-4 text-gray-700 dark:text-gray-200 bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg outline-none border-2 border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-400 shadow-lg rounded-xl transition-all duration-300 focus:ring-4 focus:ring-indigo-400/30 hover:shadow-xl" />
                             </div>
                             <div className="flex-1">
-                                <label htmlFor="lastName" className="font-semibold text-gray-700 dark:text-gray-200">Last name</label>
-                                    <input id="lastName" name="lastName" type="text" required className="w-full mt-2 px-4 py-3 text-gray-700 dark:text-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-400 shadow rounded-xl transition-all duration-300 focus:ring-2 focus:ring-indigo-400" />
+                                <label htmlFor="lastName" className="font-bold text-gray-800 dark:text-gray-200 text-sm mb-2 block">Last name</label>
+                                <input id="lastName" name="lastName" type="text" required className="w-full mt-2 px-5 py-4 text-gray-700 dark:text-gray-200 bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg outline-none border-2 border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-400 shadow-lg rounded-xl transition-all duration-300 focus:ring-4 focus:ring-indigo-400/30 hover:shadow-xl" />
                             </div>
                         </div>
                     </div>
                     <div>
-                        <label htmlFor="email" className="font-semibold text-gray-700 dark:text-gray-200">Email</label>
-                        <input id="email" name="email" type="email" required className="w-full mt-2 px-4 py-3 text-gray-700 dark:text-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-400 shadow rounded-xl transition-all duration-300 focus:ring-2 focus:ring-indigo-400" />
+                        <label htmlFor="email" className="font-bold text-gray-800 dark:text-gray-200 text-sm mb-2 block">Email</label>
+                        <input id="email" name="email" type="email" required className="w-full mt-2 px-5 py-4 text-gray-700 dark:text-gray-200 bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg outline-none border-2 border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-400 shadow-lg rounded-xl transition-all duration-300 focus:ring-4 focus:ring-indigo-400/30 hover:shadow-xl" />
                     </div>
                     <div>
-                        <label htmlFor="phone" className="font-semibold text-gray-700 dark:text-gray-200">Phone number</label>
-                        <div className="flex gap-2 mt-2">
-                            <select className="px-3 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 font-semibold">
+                        <label htmlFor="phone" className="font-bold text-gray-800 dark:text-gray-200 text-sm mb-2 block">Phone number</label>
+                        <div className="flex gap-3 mt-2">
+                            <select className="px-4 py-4 rounded-xl border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 focus:ring-4 focus:ring-indigo-400/30 focus:border-indigo-500">
                                 <option>SA</option>
                                 <option>US</option>
                                 <option>UK</option>
                             </select>
-                            <input id="phone" name="phone" type="tel" required placeholder="+27 (786) 593-260" className="flex-1 px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg text-gray-700 dark:text-gray-200 outline-none focus:border-indigo-500 dark:focus:border-indigo-400 shadow transition-all duration-300 focus:ring-2 focus:ring-indigo-400" />
+                            <input id="phone" name="phone" type="tel" required placeholder="+27 (786) 593-260" className="flex-1 px-5 py-4 rounded-xl border-2 border-gray-300 dark:border-gray-700 bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg text-gray-700 dark:text-gray-200 outline-none focus:border-indigo-500 dark:focus:border-indigo-400 shadow-lg transition-all duration-300 focus:ring-4 focus:ring-indigo-400/30 hover:shadow-xl" />
                         </div>
                     </div>
                     <div>
-                        <label htmlFor="message" className="font-semibold text-gray-700 dark:text-gray-200">Message</label>
-                        <textarea id="message" name="message" required className="w-full mt-2 px-4 py-4 text-gray-700 dark:text-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-400 shadow rounded-xl transition-all duration-300 focus:ring-2 focus:ring-indigo-400" rows={5}></textarea>
+                        <label htmlFor="message" className="font-bold text-gray-800 dark:text-gray-200 text-sm mb-2 block">Message</label>
+                        <textarea id="message" name="message" required className="w-full mt-2 px-5 py-4 text-gray-700 dark:text-gray-200 bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg outline-none border-2 border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-400 shadow-lg rounded-xl transition-all duration-300 focus:ring-4 focus:ring-indigo-400/30 hover:shadow-xl" rows={6}></textarea>
                     </div>
-                    <button type="submit" className="w-full px-10 py-5 mt-6 font-bold text-white bg-indigo-600 rounded-xl shadow-lg hover:bg-indigo-700 transition-all duration-300 text-lg">Submit</button>
+                    <button type="submit" className="w-full px-10 py-5 mt-6 font-bold text-white text-lg bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-3xl">Send Message</button>
                 </form>
             </div>
         </div>
