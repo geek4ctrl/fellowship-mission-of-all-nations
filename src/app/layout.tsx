@@ -72,8 +72,10 @@ export default function RootLayout({
           <html lang="en" className="scroll-smooth">
             <head>
               {/* Favicon */}
+              <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
               <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
-              <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+              <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+              <link rel="manifest" href="/site.webmanifest" />
               
               {/* Theme Color */}
               <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)" />

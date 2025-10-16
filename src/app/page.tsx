@@ -5,6 +5,7 @@ import ServiceClientComponent from './components/ServicesClientComponent'
 import TeamClientComponent from './components/TeamClientComponent'
 import BackToTop from './components/BackToTop'
 import LoadingScreen from './components/LoadingScreen'
+import PrayerRequestForm from './components/PrayerRequestForm'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <FooterClientComponent />
       </div>
       <BackToTop />
+      <PrayerRequestForm />
     </>
   )
 }
