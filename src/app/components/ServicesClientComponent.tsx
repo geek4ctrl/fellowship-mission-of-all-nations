@@ -1,6 +1,5 @@
 "use client"
-
-import { useState } from "react"
+import Image from "next/image";
 
 export default function ServiceClientComponent() {
 
@@ -35,41 +34,40 @@ export default function ServiceClientComponent() {
     ]
 
     return (
-    <section className="py-14 bg-white dark:bg-black" id="services">
-            <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-                <div className="max-w-xl mx-auto sm:text-center">
-                    <h3 className="text-gray-800 dark:text-white text-3xl font-semibold sm:text-4xl">
-                        Service schedule
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mt-3">
-
-                        Our dynamic service schedule epitomizes a rich tapestry of spiritual engagement and community connection. Every Sunday unfolds with a soul-stirring worship, ushering in a day dedicated to reflection, learning, and communal bonds. Mornings witness age-specific activities, nurturing growth in children, youth, and adults. Midday congregational services foster unity, followed by fellowship lunches that nurture camaraderie. Afternoons are diverse, ranging from choir rehearsals to outreach initiatives. Evenings offer serene contemplation with inspirational messages, while midweek gatherings provide moments of renewal. Special services mark significant occasions, blending tradition and innovation. Our evolving schedule ensures a vibrant and inclusive spiritual journey year-round.
-                    </p>
-                </div>
-                <div className="mt-12">
-                    <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-                        {
-                            team.map((item, idx) => (
-                                <li key={idx} className="text-center">
-                                    <div className="w-full h-60 sm:h-52 md:h-56 flex flex-row justify-center text-center">
-                                        <img
-                                            src={item.avatar}
-                                            className="w-6/12 h-full object-cover object-cover shadow-md rounded-xl border-4 border-indigo-200 dark:border-gray-800"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div className="mt-4">
-                                        <h4 className="text-lg text-gray-700 dark:text-white font-semibold">{item.topic}</h4>
-                                        <h2 className="dark:text-gray-200">{item.day}</h2>
-                                        <h2 className="dark:text-gray-200">{item.time}</h2>
-                                        <h2 className="dark:text-gray-200">{item.message}</h2>
-                                    </div>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
+    <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-indigo-100 dark:from-black dark:via-gray-900 dark:to-gray-800" id="services">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+            <div className="max-w-xl mx-auto sm:text-center">
+                <h3 className="text-gray-800 dark:text-white text-4xl font-extrabold mb-2 tracking-tight">Service Schedule</h3>
+                <p className="text-gray-600 dark:text-gray-300 mt-3 text-lg">
+                    Our dynamic service schedule epitomizes a rich tapestry of spiritual engagement and community connection. Every Sunday unfolds with a soul-stirring worship, ushering in a day dedicated to reflection, learning, and communal bonds. Mornings witness age-specific activities, nurturing growth in children, youth, and adults. Midday congregational services foster unity, followed by fellowship lunches that nurture camaraderie. Afternoons are diverse, ranging from choir rehearsals to outreach initiatives. Evenings offer serene contemplation with inspirational messages, while midweek gatherings provide moments of renewal. Special services mark significant occasions, blending tradition and innovation. Our evolving schedule ensures a vibrant and inclusive spiritual journey year-round.
+                </p>
             </div>
-        </section>
+            <div className="mt-16">
+                <ul className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+                    {team.map((item) => (
+                        <li key={item.topic} className="bg-white dark:bg-gray-900 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center w-full max-w-xs mx-auto transition-all duration-300 hover:shadow-xl">
+                            <div className="w-40 h-40 rounded-2xl overflow-hidden mb-4">
+                                <Image
+                                    src={item.avatar}
+                                    width={220}
+                                    height={220}
+                                    className="w-full h-full object-cover rounded-2xl"
+                                    alt={item.name}
+                                />
+                            </div>
+                            <div className="flex items-center gap-2 mb-1">
+                                <span className="text-lg font-bold text-gray-900 dark:text-white">{item.name}</span>
+                                <span className="inline-block align-middle"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clipRule="evenodd" /></svg></span>
+                            </div>
+                            <div className="text-gray-500 dark:text-gray-300 text-sm mb-2">{item.title}</div>
+                            <div className="text-gray-700 dark:text-gray-200 text-base font-medium mb-2 text-center">{item.topic}</div>
+                            <div className="text-gray-400 dark:text-gray-400 text-xs mb-2">{item.day} &bull; {item.time}</div>
+                            <div className="text-gray-500 dark:text-gray-400 text-xs italic mb-4 text-center">{item.message}</div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    </section>
     )
 }

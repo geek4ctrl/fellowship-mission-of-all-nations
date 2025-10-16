@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 // import { Inter } from 'next/font/google'
 import './globals.css'
-import ThemeToggle from './components/ThemeToggle'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
-        <ThemeToggle />
+  {/* ThemeToggle removed from layout. Now only in navigation. */}
         {children}
         <script
           dangerouslySetInnerHTML={{
