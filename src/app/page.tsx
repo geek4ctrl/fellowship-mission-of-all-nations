@@ -4,10 +4,12 @@ import HeroClientComponent from './components/HeroClientComponent'
 import ServiceClientComponent from './components/ServicesClientComponent'
 import TeamClientComponent from './components/TeamClientComponent'
 import BackToTop from './components/BackToTop'
+import LoadingScreen from './components/LoadingScreen'
 
 export default function Home() {
   return (
     <>
+      <LoadingScreen />
       <div className="animate-fade-in">
         <HeroClientComponent />
       </div>

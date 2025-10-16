@@ -159,6 +159,9 @@ export default function HeroClientComponent() {
                                     className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110 animate-card-in"
                                     alt="Church community worshipping together in the sanctuary"
                                     priority
+                                    loading="eager"
+                                    placeholder="blur"
+                                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0iI2VlZSIvPjwvc3ZnPg=="
                                     unoptimized
                                 />
                                 {/* Overlay gradient */}

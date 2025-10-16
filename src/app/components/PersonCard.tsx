@@ -46,6 +46,10 @@ const PersonCard: React.FC<PersonCardProps> = ({ avatar, name, title, className 
           height={192}
           className="relative z-10 object-cover w-full h-full transition-all duration-700 group-hover:scale-110 group-hover/image:rotate-3"
           alt={name}
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgZmlsbD0iI2U1ZTdlYiIvPjwvc3ZnPg=="
+          quality={75}
           unoptimized
         />
         
