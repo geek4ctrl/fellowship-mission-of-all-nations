@@ -66,8 +66,7 @@ export default function HeroClientComponent() {
                         <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-2">A Place of Worship, Fellowship, and Service</h2>
                         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-6 font-normal">Greetings and welcome to the virtual space of our church! We're thrilled to have you join us. Embracing a spirit of warmth and inclusivity, Fellowship Mission of All Nations is a community devoted to worship, fellowship, and the embodiment of God's boundless love. Navigate through our online abode to unveil a plethora of services, upcoming events, and invaluable resources. Together, let's embark on this journey of faith, supporting and uplifting one another. Your presence enriches our digital congregation, and we invite you to explore the profound connections and shared devotion that define our collective spiritual voyage.</p>
                         <div className="flex gap-4 mb-6">
-                            <a href="#contact" className="inline-block px-6 py-3 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold shadow hover:bg-gray-900 dark:hover:bg-gray-200 transition-all">Try for Free</a>
-                            <button className="inline-block px-6 py-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition-all">Preview</button>
+                            {/* Buttons removed for cleaner look */}
                         </div>
                     </div>
                     {/* Right Side: Modern Card Image */}
@@ -80,6 +79,7 @@ export default function HeroClientComponent() {
                                 className="object-cover w-full h-full"
                                 alt="Church community"
                                 priority
+                                unoptimized
                             />
                         </div>
                     </div>

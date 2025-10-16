@@ -45,7 +45,7 @@ export default function ServiceClientComponent() {
             <div className="mt-16">
                 <ul className="flex flex-col items-center justify-center w-full gap-10 sm:grid sm:grid-cols-2 md:grid-cols-3">
                     {team.map((item) => (
-                        <li key={item.topic} className="bg-white dark:bg-gray-900 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-800 p-6 sm:p-8 flex flex-col items-center w-full max-w-xs sm:max-w-xs xs:max-w-full mb-8 transition-all duration-300 hover:shadow-xl text-base xs:text-lg">
+                        <li key={item.topic} className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 p-4 sm:p-6 flex flex-col items-center w-full max-w-xs xs:max-w-full mb-6 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:border-indigo-300 dark:hover:border-indigo-600">
                             <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden mb-3 sm:mb-4">
                                 <Image
                                     src={item.avatar}
@@ -53,6 +53,7 @@ export default function ServiceClientComponent() {
                                     height={160}
                                     className="w-full h-full object-cover rounded-2xl"
                                     alt={item.name}
+                                    unoptimized
                                 />
                             </div>
                             <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 mb-1">
