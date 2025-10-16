@@ -38,13 +38,13 @@ export default function TeamClientComponent() {
     ]
 
     return (
-        <section className="py-14" id="team">
+    <section className="py-14 bg-white dark:bg-black" id="team">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-xl mx-auto sm:text-center">
-                    <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                    <h3 className="text-gray-800 dark:text-white text-3xl font-semibold sm:text-4xl">
                         Our team
                     </h3>
-                    <p className="text-gray-600 mt-3">
+                    <p className="text-gray-600 dark:text-gray-300 mt-3">
                         Within our church team, a close-knit assembly of passionate individuals stands united by a profound connection of faith and love. Our shared commitment extends beyond the confines of our congregation, reaching into the heart of the community we serve. Fueled by a collective desire to create positive change, we engage in worship, outreach, and unwavering support. In this harmonious collaboration, we cultivate an environment that reflects the essence of togetherness, compassion, and a common purpose. Together, as a dedicated force, we strive to make a lasting impact, guided by the principles of faith that bind us and the love that propels us forward.
                     </p>
                 </div>
@@ -56,13 +56,13 @@ export default function TeamClientComponent() {
                                     <div className="w-full h-60 sm:h-52 md:h-56 flex flex-row justify-center text-center">
                                         <img
                                             src={item.avatar}
-                                            className="w-6/12 h-full object-cover object-cover shadow-md rounded-xl"
+                                            className="w-6/12 h-full object-cover object-cover shadow-md rounded-xl border-4 border-indigo-200 dark:border-gray-800"
                                             alt=""
                                         />
                                     </div>
                                     <div className="mt-4">
-                                        <h4 className="text-lg text-gray-700 font-semibold">{item.name}</h4>
-                                        <h2>{item.title}</h2>
+                                        <h4 className="text-lg text-gray-700 dark:text-white font-semibold">{item.name}</h4>
+                                        <h2 className="dark:text-gray-200">{item.title}</h2>
                                     </div>
                                 </li>
                             ))

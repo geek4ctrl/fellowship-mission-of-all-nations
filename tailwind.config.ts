@@ -23,6 +23,7 @@ const config: Config = {
     "Segoe UI Symbol",
     "Noto Color Emoji",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {

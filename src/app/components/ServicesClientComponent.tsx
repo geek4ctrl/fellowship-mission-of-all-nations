@@ -35,13 +35,13 @@ export default function ServiceClientComponent() {
     ]
 
     return (
-        <section className="py-14" id="services">
+    <section className="py-14 bg-white dark:bg-black" id="services">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-xl mx-auto sm:text-center">
-                    <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                    <h3 className="text-gray-800 dark:text-white text-3xl font-semibold sm:text-4xl">
                         Service schedule
                     </h3>
-                    <p className="text-gray-600 mt-3">
+                    <p className="text-gray-600 dark:text-gray-300 mt-3">
 
                         Our dynamic service schedule epitomizes a rich tapestry of spiritual engagement and community connection. Every Sunday unfolds with a soul-stirring worship, ushering in a day dedicated to reflection, learning, and communal bonds. Mornings witness age-specific activities, nurturing growth in children, youth, and adults. Midday congregational services foster unity, followed by fellowship lunches that nurture camaraderie. Afternoons are diverse, ranging from choir rehearsals to outreach initiatives. Evenings offer serene contemplation with inspirational messages, while midweek gatherings provide moments of renewal. Special services mark significant occasions, blending tradition and innovation. Our evolving schedule ensures a vibrant and inclusive spiritual journey year-round.
                     </p>
@@ -54,15 +54,15 @@ export default function ServiceClientComponent() {
                                     <div className="w-full h-60 sm:h-52 md:h-56 flex flex-row justify-center text-center">
                                         <img
                                             src={item.avatar}
-                                            className="w-6/12 h-full object-cover object-cover shadow-md rounded-xl"
+                                            className="w-6/12 h-full object-cover object-cover shadow-md rounded-xl border-4 border-indigo-200 dark:border-gray-800"
                                             alt=""
                                         />
                                     </div>
                                     <div className="mt-4">
-                                        <h4 className="text-lg text-gray-700 font-semibold">{item.topic}</h4>
-                                        <h2>{item.day}</h2>
-                                        <h2>{item.time}</h2>
-                                        <h2>{item.message}</h2>
+                                        <h4 className="text-lg text-gray-700 dark:text-white font-semibold">{item.topic}</h4>
+                                        <h2 className="dark:text-gray-200">{item.day}</h2>
+                                        <h2 className="dark:text-gray-200">{item.time}</h2>
+                                        <h2 className="dark:text-gray-200">{item.message}</h2>
                                     </div>
                                 </li>
                             ))

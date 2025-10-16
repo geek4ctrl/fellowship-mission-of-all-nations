@@ -38,16 +38,16 @@ export default function ContactClientComponent() {
     ]
 
     return (
-        <main className="py-14" id="contact">
-            <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+    <main className="py-14 bg-white dark:bg-black" id="contact">
+            <div className="max-w-screen-xl mx-auto px-4 text-gray-600 dark:text-gray-300 md:px-8">
                 <div className="max-w-lg mx-auto space-y-3 sm:text-center">
-                    <h3 className="text-indigo-600 font-semibold">
+                    <h3 className="text-indigo-600 dark:text-indigo-400 font-semibold">
                         Contact
                     </h3>
-                    <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                    <p className="text-gray-800 dark:text-white text-3xl font-semibold sm:text-4xl">
                         Get in touch
                     </p>
-                    <p>
+                    <p className="dark:text-gray-200">
                         We’d love to hear from you! Please fill out the form bellow.
                     </p>
                 </div>
@@ -64,7 +64,7 @@ export default function ContactClientComponent() {
                                 <input
                                     type="text"
                                     required
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                    className="w-full mt-2 px-3 py-2 text-gray-500 dark:text-gray-200 bg-transparent outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-600 dark:focus:border-indigo-400 shadow-sm rounded-lg"
                                 />
                             </div>
                             <div>
@@ -74,7 +74,7 @@ export default function ContactClientComponent() {
                                 <input
                                     type="text"
                                     required
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                    className="w-full mt-2 px-3 py-2 text-gray-500 dark:text-gray-200 bg-transparent outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-600 dark:focus:border-indigo-400 shadow-sm rounded-lg"
                                 />
                             </div>
                         </div>
@@ -85,7 +85,7 @@ export default function ContactClientComponent() {
                             <input
                                 type="email"
                                 required
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                className="w-full mt-2 px-3 py-2 text-gray-500 dark:text-gray-200 bg-transparent outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-600 dark:focus:border-indigo-400 shadow-sm rounded-lg"
                             />
                         </div>
                         <div>
@@ -94,7 +94,7 @@ export default function ContactClientComponent() {
                             </label>
                             <div className="relative mt-2">
                                 <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
-                                    <select className="text-sm bg-transparent outline-none rounded-lg h-full">
+                                    <select className="text-sm bg-transparent outline-none rounded-lg h-full dark:text-gray-200 dark:bg-black">
                                         <option>SA</option>
                                         {/* <option>ES</option>
                                         <option>MR</option> */}
@@ -104,7 +104,7 @@ export default function ContactClientComponent() {
                                     type="number"
                                     placeholder="+27 (786) 593-260"
                                     required
-                                    className="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                    className="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-600 dark:focus:border-indigo-400 shadow-sm rounded-lg dark:text-gray-200"
                                 />
                             </div>
                         </div>
@@ -112,10 +112,10 @@ export default function ContactClientComponent() {
                             <label className="font-medium">
                                 Message
                             </label>
-                            <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
+                            <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border border-gray-300 dark:border-gray-700 focus:border-indigo-600 dark:focus:border-indigo-400 shadow-sm rounded-lg dark:text-gray-200"></textarea>
                         </div>
                         <button
-                            className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                            className="w-full px-4 py-2 text-white font-medium bg-indigo-600 dark:bg-gray-800 hover:bg-indigo-500 dark:hover:bg-gray-700 active:bg-indigo-600 dark:active:bg-gray-900 rounded-lg duration-150"
                         >
                             Submit
                         </button>

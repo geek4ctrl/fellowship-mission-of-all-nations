@@ -7,11 +7,21 @@ import TeamClientComponent from './components/TeamClientComponent'
 export default function Home() {
   return (
     <>
-      <HeroClientComponent />
-      <ServiceClientComponent />
-      <TeamClientComponent />
-      <ContactClientComponent />
-      <FooterClientComponent />
+      <div className="animate-fade-in">
+        <HeroClientComponent />
+      </div>
+      <div className="animate-fade-in delay-200">
+        <ServiceClientComponent />
+      </div>
+      <div className="animate-fade-in delay-400">
+        <TeamClientComponent />
+      </div>
+      <div className="animate-fade-in delay-600">
+        <ContactClientComponent />
+      </div>
+      <div className="animate-fade-in delay-800">
+        <FooterClientComponent />
+      </div>
     </>
   )
 }
