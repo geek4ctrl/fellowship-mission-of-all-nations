@@ -74,41 +74,32 @@ export default function FooterClientComponent() {
                     </div>
                 </div>
                 {/* Right: Multi-column navigation */}
-                <div className="flex-[2] grid grid-cols-2 md:grid-cols-4 gap-10 w-full">
+                <div className="flex-[2] grid grid-cols-2 md:grid-cols-3 gap-10 w-full">
                     <div>
-                        <h4 className="font-bold text-gray-900 dark:text-white mb-5 text-base xs:text-lg">Product</h4>
+                        <h4 className="font-bold text-gray-900 dark:text-white mb-5 text-base xs:text-lg">Ministry</h4>
                         <ul className="space-y-3 text-base xs:text-lg">
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Service Schedule</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Events</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Gallery</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Resources</a></li>
+                            <li><a href="#services" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Service Schedule</a></li>
+                            <li><a href="#team" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Our Team</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Events</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Sermons</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-bold text-gray-900 dark:text-white mb-5">Explore</h4>
+                        <h4 className="font-bold text-gray-900 dark:text-white mb-5">Connect</h4>
                         <ul className="space-y-3 text-sm">
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">About</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Team</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Contact</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Outreach</a></li>
+                            <li><a href="#hero" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">About Us</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Contact</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Get Involved</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Outreach</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-bold text-gray-900 dark:text-white mb-5">Company</h4>
+                        <h4 className="font-bold text-gray-900 dark:text-white mb-5">Resources</h4>
                         <ul className="space-y-3 text-sm">
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">About Us</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Careers</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Media</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-gray-900 dark:text-white mb-5">Support</h4>
-                        <ul className="space-y-3 text-sm">
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Help Center</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Contact</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Terms</a></li>
-                            <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Privacy Policy</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Prayer Request</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Give Online</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Bible Study</a></li>
+                            <li><a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Testimonies</a></li>
                         </ul>
                     </div>
                 </div>
@@ -119,9 +110,8 @@ export default function FooterClientComponent() {
                     <span className="hidden sm:inline">All rights reserved.</span>
                 </span>
                 <div className="flex gap-6 mt-4 md:mt-0">
-                    <a href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Privacy Policy</a>
-                    <a href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Terms</a>
-                    <a href="#" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Code of Conduct</a>
+                    <a href="#contact" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Privacy Policy</a>
+                    <a href="#contact" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Contact Us</a>
                 </div>
             </div>
         </footer>
