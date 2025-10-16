@@ -35,7 +35,7 @@ export default function ServiceClientComponent() {
 
     return (
     <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-indigo-100 dark:from-black dark:via-gray-900 dark:to-gray-800" id="services">
-    <div className="max-w-screen-xl mx-auto px-4 xs:px-6 md:px-8">
+    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
             <div className="max-w-xl mx-auto sm:text-center">
                 <h3 className="text-gray-800 dark:text-white text-4xl font-extrabold mb-2 tracking-tight">Service Schedule</h3>
                 <p className="text-gray-600 dark:text-gray-300 mt-3 text-lg font-normal">
@@ -45,13 +45,14 @@ export default function ServiceClientComponent() {
             <div className="mt-16">
                 <ul className="flex flex-col items-center justify-center w-full gap-10 sm:grid sm:grid-cols-2 md:grid-cols-3">
                     {team.map((item) => (
-                        <li key={item.topic} className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 p-4 sm:p-6 flex flex-col items-center w-full max-w-xs xs:max-w-full mb-6 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:border-indigo-300 dark:hover:border-indigo-600">
+                        <li key={item.topic} className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 p-4 sm:p-6 flex flex-col items-center w-full max-w-xs sm:max-w-xs xs:max-w-full mb-6 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:border-indigo-400 dark:hover:border-indigo-600 group">
+                            <div className="absolute inset-0 rounded-3xl border-4 border-transparent group-hover:border-indigo-400 dark:group-hover:border-indigo-600 transition-all duration-300 pointer-events-none"></div>
                             <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden mb-3 sm:mb-4">
                                 <Image
                                     src={item.avatar}
                                     width={160}
                                     height={160}
-                                    className="w-full h-full object-cover rounded-2xl"
+                                    className="w-full h-full object-cover rounded-2xl max-w-full max-h-full"
                                     alt={item.name}
                                     unoptimized
                                 />

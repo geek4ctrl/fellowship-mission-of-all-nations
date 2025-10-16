@@ -37,7 +37,7 @@ export default function FooterClientComponent() {
 
     return (
         <footer id="footer" className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 px-6 py-10 w-full">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 justify-between items-start px-4 xs:px-6">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 justify-between items-start px-4 sm:px-6">
                 {/* Left: Logo, tagline, social, status */}
                 <div className="flex-1 min-w-[220px] flex flex-col gap-4">
                     <div className="flex items-center gap-2 mb-2">

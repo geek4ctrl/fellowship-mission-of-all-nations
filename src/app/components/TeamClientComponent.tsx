@@ -38,7 +38,7 @@ export default function TeamClientComponent() {
 
     return (
     <section className="py-14 bg-white dark:bg-black" id="team">
-            <div className="max-w-screen-xl mx-auto px-4 xs:px-6 md:px-8">
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
                 <div className="max-w-xl mx-auto sm:text-center">
                     <h3 className="text-gray-800 dark:text-white text-3xl font-semibold sm:text-4xl">
                         Our team
@@ -51,7 +51,8 @@ export default function TeamClientComponent() {
                     <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
                         {
                             team.map((item, idx) => (
-                                <li key={item.name} className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 p-4 sm:p-6 flex flex-col items-center w-full max-w-xs xs:max-w-full mx-auto mb-6 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:border-indigo-300 dark:hover:border-indigo-600">
+                                <li key={item.name} className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 p-4 sm:p-6 flex flex-col items-center w-full max-w-xs sm:max-w-xs xs:max-w-full mx-auto mb-6 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:border-indigo-400 dark:hover:border-indigo-600 group">
+                                    <div className="absolute inset-0 rounded-3xl border-4 border-transparent group-hover:border-indigo-400 dark:group-hover:border-indigo-600 transition-all duration-300 pointer-events-none"></div>
                                     <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden mb-4 sm:mb-6">
                                         <Image
                                             src={item.avatar}
